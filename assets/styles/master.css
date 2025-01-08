@@ -2,3 +2,9 @@
 .header-img{
 background-image: url('../img/Rectangle 1 (1).png');
 }
+@theme{
+    --color-red-dark : #FF6767;
+    --color-black-a : #000000;
+    --color-white-a : #fff;
+    --font-size-two : 2rem;
+}

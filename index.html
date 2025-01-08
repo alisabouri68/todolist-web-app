@@ -9,20 +9,45 @@
 <body class="overflow-x-hidden">
     <!-- svg sprite -->
     <svg class="hidden">
-
+        <symbol id= "search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </symbol>
+          
     </svg>
     <!-- header -->
     <header class="header-img">
         <!-- header-container -->
         <div class="container mx-auto">
-            <!-- header-parent-logo-searchbox-date -->
+            <!-- header-parent-title-searchbox-date -->
             <div class="w-full flex items-center">
-                <!-- header-logo -->
-                <div class="header-logo">
-sssssssssssssssssss
+                <!-- header-title -->
+                <div class="header-logo flex">
+                    <div>
+                        <span class="text-red-dark text-two font-extrabold">
+                            Dash
+                        </span>
+                    </div>
+                    <div>
+                        <span class="text-black-a text-two font-extrabold">
+                            board
+                        </span>
+                    </div>
                 </div>
                 <!-- header-search-box -->
-                <div class="header-"></div>
+                <div class="header-search flex grow items-center relative  border h-full">
+                    <div class="absolute top-0 ring-0">
+                        <input type="text" id="search" placeholder="search your task here..." autocomplete="off">
+                    </div>
+                    <div class="absolute top-0 ring-0">
+                        <button class="bg-red-dark">
+                            <svg class="w-2.5 h-2.5 text-white-a">
+                                <use href="#search-icon">
+                                    
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 <!-- header-date -->
                 <div class="header-"></div>
             </div>
