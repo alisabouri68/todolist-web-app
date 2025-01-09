@@ -1,10 +1,32 @@
 @import "tailwindcss";
-.header-img{
+/* .header-img{
 background-image: url('../img/Rectangle 1 (1).png');
+} */
+:root {
+  --red-d: #ff6767;
+  --color-black-d: #000000;
+  --color-white-d: #fff;
+  --color-blue-ad: #f5f8ff;
 }
-@theme{
-    --color-red-dark : #FF6767;
-    --color-black-a : #000000;
-    --color-white-a : #fff;
-    --font-size-two : 2rem;
+@theme {
+  --color-red-dark: var(--red-d);
+  --color-black-a: var(--color-black-d);
+  --color-white-a: var(--color-white-d);
+  --color-blue-a: var(--color-blue-ad);
+  --font-size-two: 2rem;
+  --shadow-a: 0 10px 15px 0px rgba(0, 0, 0, 0.099);
+}
+.light {
+  background-color: var(--color-white-d);
+  color: var(--color-black-d);
+}
+.dark {
+  background-color: var(--color-black-d);
+  color: var(--color-white-d);
+}
+@media (prefers-color-scheme: Dark) {
+  body.auto {
+    background-color: var(--color-black-d);
+    color: var(--color-white-d);
+  }
 }
