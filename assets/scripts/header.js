@@ -162,7 +162,7 @@ function createtask() {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div><h2 class="font-extrabold text-lg">${taskValArr[flaglength].title}</h2></div>
+                                        <div class="overflow-hidden"><h2 class="font-extrabold text-lg">${taskValArr[flaglength].title}</h2></div>
                                         <div class="w-full h-[80px] overflow-hidden"><p>${taskValArr[flaglength].desc}</p></div>
                                         <div class="flex gap-5">
                                             <div><span class="text-[10px]">Priority : </span><span class="
