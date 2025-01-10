@@ -24,7 +24,8 @@ background-image: url('../img/Rectangle 1 (1).png');
   background-color: var(--color-black-d);
   color: var(--color-white-d);
 }
-.active-add-task , .active-edit-task {
+.active-add-task,
+.active-edit-task {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.686);
@@ -36,7 +37,8 @@ background-image: url('../img/Rectangle 1 (1).png');
   left: 0;
   overflow: hidden;
 }
-.hidden-add-task , .hidden-edit-task {
+.hidden-add-task,
+.hidden-edit-task {
   display: none;
 }
 .progress-circle {
@@ -66,12 +68,113 @@ background-image: url('../img/Rectangle 1 (1).png');
 }
 .scrolls::-webkit-scrollbar {
   width: 0 !important;
+}
+.scrolls {
+  -ms-overflow-style: none;
+  -ms-overflow-style: none;
+}
+ .footer{
+        width: 300px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 180%;
+          height: 100%;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.3);
+          z-index: 1;
+          transform: skew(45deg);
+          transition: 0.5s;
+        }
+        &:hover {
+          > ::before {
+            left: -180%;
+          }
+          > img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+          }
+          > h2 {
+            transform: perspective(400px) rotateY(0deg);
+          }
+          > ul {
+            transform: perspective(800px) rotateY(0deg);
 
-}
-.scrolls{
-  -ms-overflow-style: none;
-  -ms-overflow-style: none;
-}
+            > li {
+              transform: perspective(800px) rotateY(0deg);
+              &:nth-child(1) {
+                transition-delay: 0.2s;
+              }
+              &:nth-child(2) {
+                transition-delay: 0.6s;
+              }
+              &:nth-child(3) {
+                transition-delay: 0.8s;
+              }
+              > svg {
+                fill:#f5f8ff;
+              }
+            }
+          }
+        }
+        > img {
+          height: 400px;
+          width: 300px;
+          filter: grayscale(100%);
+          transition: 2s;
+          object-fit: cover;
+        }
+        > h2 {
+          background: var(--one-x);
+          color: #fff;
+          text-align: center;
+          margin: 0;
+          padding: 10px 0;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          transform: perspective(400px) rotateY(90deg);
+          transform-origin: right;
+          transition: 1s;
+        }
+        > ul {
+          position: absolute;
+          top: 10px;
+          left: 0px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          background: rgba(255, 255, 255, 0);
+          > li {
+            background: #333;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            transform: perspective(800px) rotateY(90deg);
+            transition: 0.5s;
+            transform-origin: left;
+            > a {
+              color: var(--one-x);
+              background: rgba(255, 255, 255, 0);
+            }
+          }
+        }
+        >h6{
+          font-size: 3vw;
+          color: var(--four-x);
+          text-shadow: 0px 0px 5px  var(--four-x);
+        }
+      
+      }
+
+    
+
 @media (prefers-color-scheme: dark) {
   body.auto {
     background-color: var(--color-black-d);
@@ -86,20 +189,19 @@ background-image: url('../img/Rectangle 1 (1).png');
 }
 @media (prefers-color-scheme: light) {
   .modaladd.auto {
-    background-color:var(--color-white-d);
-    color: var(--color-black-d); 
+    background-color: var(--color-white-d);
+    color: var(--color-black-d);
   }
 }
 @media (prefers-color-scheme: light) {
   .modaledite.auto {
-    background-color:var(--color-white-d);
-    color: var(--color-black-d); 
+    background-color: var(--color-white-d);
+    color: var(--color-black-d);
   }
 }
 @media (prefers-color-scheme: dark) {
   .modaledite.auto {
-    background-color: var(--color-black-d);
+    background-color:var(--red-d);
     color: var(--color-white-d);
   }
 }
-
