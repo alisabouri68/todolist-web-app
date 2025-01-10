@@ -272,7 +272,6 @@ function starttask(e) {
       startp();
       completp();
       notstartp();
-      window.location.reload();
     }
   });
 }
