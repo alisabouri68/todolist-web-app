@@ -24,9 +24,82 @@ background-image: url('../img/Rectangle 1 (1).png');
   background-color: var(--color-black-d);
   color: var(--color-white-d);
 }
-@media (prefers-color-scheme: Dark) {
+.active-add-task , .active-edit-task {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.686);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.hidden-add-task , .hidden-edit-task {
+  display: none;
+}
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* background: conic-gradient(#00ff00 0% 75%, #ddd 75% 100%); */
+}
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+}
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+.scrolls::-webkit-scrollbar {
+  width: 0 !important;
+
+}
+.scrolls{
+  -ms-overflow-style: none;
+  -ms-overflow-style: none;
+}
+@media (prefers-color-scheme: dark) {
   body.auto {
     background-color: var(--color-black-d);
     color: var(--color-white-d);
   }
 }
+@media (prefers-color-scheme: dark) {
+  .modaladd.auto {
+    background-color: var(--color-black-d);
+    color: var(--color-white-d);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .modaladd.auto {
+    background-color:var(--color-white-d);
+    color: var(--color-black-d); 
+  }
+}
+@media (prefers-color-scheme: light) {
+  .modaledite.auto {
+    background-color:var(--color-white-d);
+    color: var(--color-black-d); 
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .modaledite.auto {
+    background-color: var(--color-black-d);
+    color: var(--color-white-d);
+  }
+}
+
