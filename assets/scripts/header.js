@@ -148,7 +148,7 @@ function createtask() {
     flaglength--;
     let div = document.createElement("div");
     div.id = taskValArr[flaglength].id;
-    div.innerHTML = `                                    <div class="border rounded-2xl p-4 max-h-48 min-h-48">
+    div.innerHTML = `                                    <div class="border rounded-2xl p-4 max-h-48 min-h-48 overflow-hidden">
                                         <div class="flex justify-end items-center">
                                             <ul class="relative">
                                                 <li class="group">
@@ -247,6 +247,7 @@ btnSubmitEdit.addEventListener("click", (e) => {
     "#textdescriptionedit"
   ).value;
   saveTasks();
+
   // loadTasks()
   window.location.reload();
 });
@@ -269,6 +270,7 @@ function starttask(e) {
       taskValArr[i].notstarted = null;
       taskValArr[i].inprogress = "start";
       saveTasks();
+      getcomplocal()
       startp();
       completp();
       notstartp();
