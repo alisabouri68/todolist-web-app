@@ -285,10 +285,11 @@ function endtask(e) {
       taskValArr[i].inprogress = null;
       taskValArr[i].notstarted = null;
       taskValArr[i].completed = "complete";
+      saveTasks();
+      getcomplocal()
       startp();
       completp();
       notstartp();
-      getcomplocal()
     }
   });
 }
